@@ -1,0 +1,64 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+
+:root{
+  --brand:#0b63d6;
+  --muted:#666;
+  --gap:1rem;
+  --container:1100px;
+  --radius:8px;
+}
+
+/* Layout */
+.container{ max-width:var(--container); margin:0 auto; padding:1rem; }
+
+/* Header */
+.site-header{ background:#fff; border-bottom:1px solid #eee; }
+.header-inner{ display:flex; align-items:center; justify-content:space-between; padding:0.75rem 0; gap:1rem; }
+.brand{ font-weight:700; color:var(--brand); text-decoration:none; font-size:1.2rem; }
+.nav-toggle{ display:none; background:transparent; border:none; font-size:1.25rem; cursor:pointer; }
+
+/* Primary nav - desktop */
+.primary-nav ul{ list-style:none; display:flex; gap:1rem; align-items:center; }
+.primary-nav a{ text-decoration:none; color:#222; padding:0.35rem 0.5rem; }
+.primary-nav a[aria-current="page"]{ font-weight:600; color:var(--brand); }
+
+/* Hero */
+.hero{ padding:2rem 0; text-align:center; }
+.hero .lead{ color:var(--muted); margin-top:0.5rem; }
+
+/* Grid utilities */
+.grid{ display:grid; gap:1rem; }
+.features-grid{ grid-template-columns: repeat(3,1fr); }
+.services-grid{ grid-template-columns: repeat(3,1fr); }
+
+/* Cards/articles */
+article{ background:#fff; padding:1rem; border-radius:var(--radius); box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+
+/* Buttons */
+.btn{ display:inline-block; background:var(--brand); color:#fff; padding:0.6rem 1rem; border-radius:6px; text-decoration:none; }
+.btn:focus{ outline:3px solid rgba(11,99,214,0.2); }
+
+/* Form */
+.form-row{ margin-bottom:0.75rem; display:flex; flex-direction:column; }
+label{ margin-bottom:0.25rem; font-weight:600; color:#222; }
+input,textarea{ padding:0.5rem; border:1px solid #ccc; border-radius:6px; font:inherit; }
+.error{ color:#c00; font-size:0.9rem; margin-top:0.25rem; }
+
+/* Footer */
+.site-footer{ margin-top:2rem; padding:1rem 0; background:#fafafa; border-top:1px solid #eee; text-align:center; color:var(--muted); }
+
+/* Responsive breakpoints */
+@media (max-width:900px){
+  .features-grid, .services-grid{ grid-template-columns: repeat(2,1fr); }
+}
+
+@media (max-width:700px){
+  .header-inner{ gap:0.5rem; }
+  .nav-toggle{ display:block; }
+  .primary-nav{ position:absolute; top:64px; right:1rem; background:#fff; border:1px solid #eee; padding:0.5rem; border-radius:8px; display:none; }
+  .primary-nav[aria-hidden="false"]{ display:block; }
+  .primary-nav ul{ flex-direction:column; min-width:160px; }
+  .features-grid, .services-grid{ grid-template-columns: 1fr; }
+}

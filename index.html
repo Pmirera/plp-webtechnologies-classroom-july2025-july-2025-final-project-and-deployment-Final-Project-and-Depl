@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio site - responsive multipage demo" />
+  <title>Peter Okemwa • Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Homepage">Peter Okemwa</a>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav">
+        <span class="sr-only">Toggle navigation</span>
+        ☰
+      </button>
+
+      <nav id="mainNav" class="primary-nav" role="navigation" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Hello — I build accessible, responsive sites</h1>
+      <p class="lead">This starter kit uses HTML5 semantic structure, responsive CSS Grid & Flexbox, and minimal JS.</p>
+      <p><a class="btn" href="services.html">View Services</a></p>
+    </section>
+
+    <section class="features" aria-labelledby="features-heading">
+      <h2 id="features-heading">Highlights</h2>
+      <div class="grid features-grid">
+        <article>
+          <h3>Semantic HTML</h3>
+          <p>Proper landmarks and heading hierarchy for screen readers and SEO.</p>
+        </article>
+        <article>
+          <h3>Responsive Layout</h3>
+          <p>Grid + Flexbox ensure the layout adapts across devices.</p>
+        </article>
+        <article>
+          <h3>Interactive</h3>
+          <p>Nav toggle for mobile and client-side contact validation.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year"></span> MySite — Built for demo. <a href="privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Contact • MySite - get in touch" />
+  <title>MySite • Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">MySite</a>
+      <button id="navToggle4" class="nav-toggle" aria-expanded="false" aria-controls="mainNav4">☰</button>
+      <nav id="mainNav4" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact</h1>
+    <form id="contactForm" novalidate>
+      <div class="form-row">
+        <label for="name">Name <span aria-hidden="true">*</span></label>
+        <input id="name" name="name" type="text" required minlength="2" autocomplete="name">
+        <span class="error" id="nameErr" aria-live="polite"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email <span aria-hidden="true">*</span></label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+        <span class="error" id="emailErr" aria-live="polite"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" maxlength="500"></textarea>
+        <span class="error" id="msgErr" aria-live="polite"></span>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+      <p id="formStatus" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>&copy; <span id="year4"></span> MySite</p></div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
